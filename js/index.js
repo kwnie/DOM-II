@@ -1,11 +1,4 @@
 
-
-//* `resize`
-//* `scroll`
-//* `select`
-//* `dblclick`
-//* `drag / drop`
-
 // 1: mouseover
 let navLink = document.querySelector("nav a");
 navLink.addEventListener('mouseover', (event) => {
@@ -44,15 +37,30 @@ window.addEventListener('resize', (e) => {
     alert("You resized the browser");
 })
 
-// 8: 
+// 8: focus
+let focus = document.querySelector('img');
+focus.addEventListener('focus', (e) => {
+    document.body.style.backgroundColor = 'pink'
+});
 
-// 9: 
+// 9: online
+window.addEventListener('online', (e) => {
+    console.log("You are now online")
+});
+
 
 // 10. dblclick
 let logoHeading = document.querySelector(".logo-heading");
 logoHeading.addEventListener('dblclick', (e) => {
     alert("No vacation for you")
 });
+
+let nest = document.querySelector('h4');
+nest.addEventListener('click', (e) => {
+    alert("nest");
+    e.stopPropagation();
+});
+
 
 
 
